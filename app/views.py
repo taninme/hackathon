@@ -20,6 +20,16 @@ def generate():
 	return render_template("about.html", LAT = LAT, LNG = LNG)
 	
 
+@app.route('/list_all')
+def list_cost():
+	g = generator()
+	list_all = g.parser()
+	list_c = dict()
+	i = 0
+	for i in range(len(list_all)):
+		list_c[i] = str(list_all[i])
+	return jsonify(list_c)
+	
 
 # https://na.api.pvp.net/api/lol/na/v1.4/summoner/by-name/G0Devil?api_key=DEV_KEY
 @app.route('/', methods=['POST'])

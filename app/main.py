@@ -18,8 +18,7 @@ class generator():
 		print os.path.dirname(os.path.realpath(__file__))
 		data = xlrd.open_workbook("data/test.xls")
 		first_sheet = data.sheet_by_index(0)
-		success = 0.0
-		amount  = 0
+
 		#sheet name
 		name = first_sheet.name
 		

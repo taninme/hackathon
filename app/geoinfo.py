@@ -46,7 +46,7 @@ class Geoinfo:
 
 
 	def __str__(self):
-		return self.LAT + " " + self.LONG
+		return self.LAST_NAME + " " + self.FIRST_NAME
 
 
 
