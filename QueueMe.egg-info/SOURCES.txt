@@ -1,0 +1,6 @@
+setup.py
+QueueMe.egg-info/PKG-INFO
+QueueMe.egg-info/SOURCES.txt
+QueueMe.egg-info/dependency_links.txt
+QueueMe.egg-info/requires.txt
+QueueMe.egg-info/top_level.txt

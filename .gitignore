@@ -1,0 +1,6 @@
+# Exclude directories
+venv/
+
+#Exclude files
+.DS_Store
+.python-version

@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+{% block head %}
+	{{ super() }}
+
+	<script>
+	$(document).ready(function(){
+	    $("p").click(function(){
+	        $(this).hide();
+	    });
+	});
+	</script>	
+{% endblock %}
+{% block content %}
+	<style>
+	body {
+	padding-left: 20%;
+	padding-right: 20%;
+	}
+	</style>
+	<h1> Just For Fun</h1>
+	<h3> This is Larry, and I hope play with you in game</h3>
+	<h3> My LOL name is  
+			<a href="javascript:request_search('G0Devil')">G0Devil</A> 
+	</h3>
+
+
+{% endblock %}

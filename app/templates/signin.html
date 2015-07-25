@@ -1,0 +1,39 @@
+{% extends "layout.html" %}
+{% from "forms.html" import render_field %}
+{% block head %}
+  {{ super() }}
+{% endblock %}
+{% block content %}
+  
+  
+  {% for message in form.email.errors %}
+    <div class="flash">{{ message }}</div>
+  {% endfor %}
+  
+  {% for message in form.password.errors %}
+    <div class="flash">{{ message }}</div>
+  {% endfor %}
+  <div id="loginbox" style="margin-top:50px" class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
+    <div class="panel panel-info">
+      <div class="panel-heading">
+        <div class="panel-title">Login</div>
+        <div style="float:right; font-size: 85%; position: relative; top:-10px">
+          <a href="{{ url_for('signup') }}"> Don't have an account? Sign up here  <i class="fa fa-user-plus"></i> </a>
+        </div>
+      </div>
+      <div class="panel-body" >
+        <form id="loginform" class="form-horizontal" role="form" action="{{ url_for('signin') }}" method="POST">
+          {{ render_field(form.email) }}
+          {{ render_field(form.password) }}
+          {{ form.csrf_token }}
+          <div class="form-group">
+            <!-- Button -->
+            <div class="col-md-offset-3 col-md-9">
+              <button id="btn-signup" type="submit" class="btn btn-info"><i class="icon-hand-right"></i> &nbsp Login</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+{% endblock %}

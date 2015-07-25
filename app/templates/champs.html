@@ -1,0 +1,48 @@
+{% extends "layout.html" %}
+{% block head %}
+    {{ super() }}
+{% endblock %}
+{% block content %}
+    <style>
+    body {
+    padding-left: 20%;
+    padding-right: 20%;
+    }
+    </style>
+    <h2>Champions Page</h2>
+    <div class="bs-component" id="Champions_table">
+        <table class="table table-striped table-hover" id="ctable">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Image</th>
+                    <th>Name</th>
+                    <th>NickName</th>
+                </tr>
+            </thead>
+        </table>
+    </div>
+    <script type="text/javascript">
+    var champs = {{champions|safe}}
+    var table = document.getElementById("ctable");
+    var counter = 1;
+    for (i in champs) {
+    var row = table.insertRow(-1);
+    // Insert new cells (<td> elements) at the 1st and 2nd position of the "new" <tr> element:
+        var cell1 = row.insertCell(0);
+        var cell2 = row.insertCell(1);
+        var cell3 = row.insertCell(2);
+        var cell4 = row.insertCell(3);
+        // Add some text to the new cells:
+        cell1.innerHTML = counter;
+        var img = document.createElement('img');
+        img.src = "/img/lol_img/champions/" + i + ".png";
+        img.style.width = '25%'
+        img.style.height = 'auto'
+        cell2.appendChild(img)
+        cell3.innerHTML = i;
+        cell4.innerHTML = champs[i]['title']
+        counter = counter + 1;
+        }
+        </script>
+    {% endblock %}

@@ -1,0 +1,5 @@
+setup.py
+LeagueHub.egg-info/PKG-INFO
+LeagueHub.egg-info/SOURCES.txt
+LeagueHub.egg-info/dependency_links.txt
+LeagueHub.egg-info/top_level.txt

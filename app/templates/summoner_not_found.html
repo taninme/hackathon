@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+{% block head %}
+	{{ super() }}
+{% endblock %}
+{% block content %}
+	<style>
+	body {
+	padding-left: 20%;
+	padding-right: 20%;
+	}
+	.margin-base-vertical {
+	margin: 40px 0;
+	}
+	</style>
+	<h2>Sommoner Not Found</h2>
+	<p>The name you input <font color="#D35400">{{input_name}}</font>is not found. Check your spelling.</p>
+{% endblock %}
