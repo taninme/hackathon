@@ -2,13 +2,23 @@ from app import app, db
 from flask import request, redirect, request, flash, session, url_for
 from flask import render_template, jsonify
 from forms import SignupForm, SigninForm
+from flask import send_file
 from models import db, User
+from main import generator
 
 from lolhelp import *
 
 @app.route('/')
 def index():
     return render_template('front.html')
+
+@app.route('/generate')
+def generate():
+	# generator = generator()
+	# generator.gene()
+	filename = 'data.png'
+	return send_file(filename, mimetype='image/png')
+
 
 # https://na.api.pvp.net/api/lol/na/v1.4/summoner/by-name/G0Devil?api_key=DEV_KEY
 @app.route('/', methods=['POST'])
