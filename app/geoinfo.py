@@ -2,7 +2,7 @@ import urllib2, urllib
 import simplejson as json
 import fiona
 
-KEY = "&key=AIzaSyCwXfO0Q-IMBN6F4gVDFbM0WrcJRMar__w"
+KEY = "&key=AIzaSyDU4m-ITLDPObZrzwvHXDGm-91pFBxu05w"
 
 url = "https://maps.googleapis.com/maps/api/geocode/json?address=" 
 

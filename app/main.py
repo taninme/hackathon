@@ -6,10 +6,11 @@ from PlotMap import *
 class generator():
 	def gene(self):
 		result = self.parser()
-
 		pt = plottool()
-		pt.heatmap(result)
-		
+
+		r =  pt.heatmap(result)
+		print r
+		return r
 	def parser(self):
 		
 		#We need to save our requests

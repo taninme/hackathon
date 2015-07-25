@@ -15,9 +15,9 @@ def index():
 @app.route('/generate')
 def generate():
 	g= generator()
-	pts = g.gene()
-
-	return render_template("about.html", pts = pts)
+	LNG, LAT = g.gene()
+	print LNG
+	return render_template("about.html", LAT = LAT, LNG = LNG)
 	
 
 
