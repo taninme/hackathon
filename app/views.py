@@ -15,9 +15,10 @@ def index():
 @app.route('/generate')
 def generate():
 	g= generator()
-	g.gene()
-	filename = 'data.png'
-	return send_file(filename, mimetype='image/png')
+	pts = g.gene()
+
+	return render_template("about.html", pts = pts)
+	
 
 
 # https://na.api.pvp.net/api/lol/na/v1.4/summoner/by-name/G0Devil?api_key=DEV_KEY
