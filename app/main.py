@@ -9,7 +9,7 @@ class generator():
 
 		pt = plottool()
 		pt.heatmap(result)
-
+		
 	def parser(self):
 		
 		#We need to save our requests

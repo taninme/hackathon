@@ -4,7 +4,7 @@ from flask import render_template, jsonify
 from forms import SignupForm, SigninForm
 from flask import send_file
 from models import db, User
-from main import generator
+from app.main import generator
 
 from lolhelp import *
 
@@ -14,8 +14,8 @@ def index():
 
 @app.route('/generate')
 def generate():
-	# generator = generator()
-	# generator.gene()
+	g= generator()
+	g.gene()
 	filename = 'data.png'
 	return send_file(filename, mimetype='image/png')
 
