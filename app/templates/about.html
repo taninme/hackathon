@@ -54,14 +54,17 @@
 var map, pointarray, heatmap;
 
 var taxiData = [];
-pts = {{pts|safe}}
-for (i in pts) {
-  taxiData.push(new google.maps.LatLng(i[0], i[1]))
+llng = {{LNG|safe}}
+llat = {{LAT|safe}}
+
+for (i = 0; i < llng.length; i++) {
+  taxiData.push(new google.maps.LatLng(llat[i], llng[i]))
 }
+
 function initialize() {
   var mapOptions = {
-    zoom: 13,
-    center: new google.maps.LatLng(37.774546, -122.433523),
+    zoom: 5,
+    center: new google.maps.LatLng(39.774546, -98.433523),
     mapTypeId: google.maps.MapTypeId.SATELLITE
   };
 
